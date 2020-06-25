@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/addEditDrinksLayout">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/drinkName_layout"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:hint="Drink name"
+                android:layout_height="wrap_content"
+                android:id="@+id/drinkName"
+                android:textStyle="normal"
+                android:typeface="normal"
+                android:textColor="@color/body_paragraph_color"
+                android:textSize="14sp"
+                android:gravity="left"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/drinkPrice_layout"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:hint="Price $"
+                android:layout_height="wrap_content"
+                android:id="@+id/drinkPrice"
+                android:textStyle="normal"
+                android:typeface="normal"
+                android:textColor="@color/body_paragraph_color"
+                android:textSize="14sp"
+                android:gravity="left"
+                android:singleLine="true"
+			  android:inputType="numberDecimal"/>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    <Button
+        android:text="@string/save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveDrink"
+        android:gravity="center"
+        android:typeface="normal"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/white"
+        android:background="@drawable/rbp_selector"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="16dp" />
+</FrameLayout>

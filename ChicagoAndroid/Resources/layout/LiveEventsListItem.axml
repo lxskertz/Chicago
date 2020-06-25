@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="4dp"
+    android:id="@+id/liveEventsCard"
+    app:cardUseCompatPadding="false"
+    app:cardBackgroundColor="@color/background_color"
+    android:foreground="?android:attr/selectableItemBackground">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color"
+        android:id="@+id/liveEventsLayout">
+		  <TextView
+            android:text="title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventTitle"
+            android:textSize="16dp"
+            android:textColor="@color/body_paragraph_color"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:singleLine="true"
+            android:layout_marginTop="8dp" />
+		 <ImageView
+            android:src="@drawable/ic_person_white_48dp"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:id="@+id/eventLogo"
+			android:scaleType="centerCrop"
+            android:clickable="false"
+            android:layout_marginTop="8dp"
+		 android:layout_below="@+id/eventTitle"/>         
+        <TextView
+            android:text="venue"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventVenue"
+            android:textSize="14dp"
+            android:textColor="@color/two_line_list_sec_color"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_below="@+id/eventLogo" />
+        <TextView
+            android:text="date"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventDate"
+            android:textSize="14dp"
+            android:textColor="@color/two_line_list_sec_color"
+            android:layout_marginRight="16dp"
+			 android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_below="@+id/eventVenue" />
+		 <ImageButton
+        android:src="@drawable/favorite_border_24"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:id="@+id/likeBtn"
+        android:layout_marginTop="4dp"
+        android:scaleType="center"
+		android:layout_below="@+id/eventDate"
+        android:clickable="true"
+        android:padding="30dp"
+        android:background="@color/background_color" /> 
+		 <TextView
+            android:text="0 like"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/likeCount"
+            android:textSize="14dp"
+            android:textColor="@color/two_line_list_sec_color"
+            android:layout_marginRight="16dp"
+			android:layout_marginTop="13dp"
+            android:layout_marginLeft="8dp"
+			android:layout_toRightOf="@id/likeBtn"
+            android:layout_below="@+id/eventDate" />
+		<ImageButton
+        android:src="@drawable/sharp_share_black_24"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:id="@+id/shareBtn"
+        android:layout_marginTop="4dp"
+		android:layout_marginRight="16dp"
+		android:layout_marginLeft="16dp"
+        android:scaleType="center"
+		android:layout_toRightOf="@id/likeCount"
+		android:layout_below="@+id/eventDate"
+        android:clickable="true"
+        android:padding="30dp"
+        android:background="@color/background_color" /> 
+		  <Button
+                android:text="Check-In"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:id="@+id/checkIn"
+                android:gravity="center"
+			    android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+			 android:layout_marginTop="16dp"
+                android:typeface="normal"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                android:textColor="@color/rbs_font_color"
+                android:background="@drawable/rbs_selector"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/eventLogo"
+			 android:layout_alignParentEnd="true"
+                android:elevation="15dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+			android:layout_marginTop="8dp"
+            android:id="@+id/carddivider"
+            android:background="@color/single_line_list_color"
+            android:layout_below="@+id/likeBtn" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

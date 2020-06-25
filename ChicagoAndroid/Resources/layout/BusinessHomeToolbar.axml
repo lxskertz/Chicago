@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+    <ImageButton
+        android:src="@drawable/baseline_more_horiz_black_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/more"
+        android:layout_marginTop="8dp"
+        android:scaleType="center"
+		        android:layout_marginRight="16dp"
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        android:padding="16dp"
+        android:layout_centerInParent="true"
+        android:background="@color/background_color" /> 
+	<ImageButton
+        android:src="@drawable/baseline_event_black_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/events"
+        android:layout_marginTop="8dp"
+        android:scaleType="center"
+        android:layout_marginLeft="52dp"
+        android:clickable="true"
+        android:layout_toRightOf="@id/home"
+        android:layout_centerInParent="true"
+        android:padding="16dp"
+        android:background="@color/background_color" />
+	<ImageButton
+        android:src="@drawable/baseline_home_black_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/home"
+        android:layout_marginTop="8dp"
+        android:scaleType="center"
+        android:clickable="true"
+        android:padding="16dp"
+        android:background="@color/background_color"
+	 android:layout_marginLeft="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

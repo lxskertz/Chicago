@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "264156134989",
+    "firebase_url": "https://tabs-6f6d6.firebaseio.com",
+    "project_id": "tabs-6f6d6",
+    "storage_bucket": "tabs-6f6d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:264156134989:android:fc228a40019efd73",
+        "android_client_info": {
+          "package_name": "com.toastingandbeingsocial.tabs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "264156134989-f7039gc45m9jha6itqjb5kc0j8f46p8e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJ7cmJ8WbFQvqA5S1Flmb9cQlV-i33cRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "264156134989-f7039gc45m9jha6itqjb5kc0j8f46p8e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

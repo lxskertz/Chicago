@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+	<TextView
+            android:text="Are you going?"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/areYouGoing"
+		android:layout_marginTop="16dp"
+		    android:layout_marginLeft="16dp"
+			android:layout_marginRight="16dp"
+            android:textColor="@color/rbp_normal_bg_color"
+            android:textSize="20sp"
+		 android:layout_alignParentLeft="true"
+            android:typeface="normal" />
+	<TextView
+            android:text="YES"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/yes"
+		android:layout_marginTop="16dp"
+		    android:layout_marginLeft="16dp"
+			android:layout_marginRight="16dp"
+            android:textColor="@color/rbp_normal_bg_color"
+            android:textSize="17sp"
+		 android:layout_alignParentEnd="true"
+            android:typeface="normal" />
+	<TextView
+            android:text="NO"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/no"
+				android:layout_marginTop="16dp"
+		    android:layout_marginLeft="16dp"
+			android:layout_marginRight="16dp"
+            android:textColor="@color/rbp_normal_bg_color"
+            android:textSize="17sp"
+		 android:clickable="true"
+        android:layout_toLeftOf="@+id/yes"
+            android:typeface="normal" />
+</RelativeLayout>

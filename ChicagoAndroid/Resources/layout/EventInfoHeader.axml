@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_color">
+        <RelativeLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color"
+            android:id="@+id/cardViewRelative">
+			 <ImageView
+            android:src="@drawable/ic_person_white_48dp"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:id="@+id/eventLogo"
+			android:scaleType="centerCrop"
+            android:clickable="false"/>
+            <TextView
+                android:text="dfrfr"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eventTitle"
+                android:textSize="16dp"
+                android:textColor="@color/near_black"
+				android:layout_below="@+id/eventLogo"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp" />
+            <TextView
+                android:text="efr"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eventOwner"
+                android:textSize="13dp"
+                android:textColor="@color/near_black"
+				android:layout_below="@+id/eventTitle"
+                android:layout_marginBottom="8dp"
+			    android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:ellipsize="end" />
+        </RelativeLayout>
+</FrameLayout>

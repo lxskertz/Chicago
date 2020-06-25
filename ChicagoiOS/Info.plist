@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>TABS</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.toastingandbeingsocial.tabsdev</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MinimumOSVersion</key>
+	<string>10.0</string>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIMainStoryboardFile~ipad</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>TABS needs access to microphone.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>TABS needs access to the photo gallery.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>chitownapi-dev.azurewebsites.net</key>
+			<dict>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+			<key>chitownapi-staging.azurewebsites.net</key>
+			<dict>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+			<key>chitownapi.azurewebsites.net</key>
+			<dict>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSCalendarsUsageDescription</key>
+	<string>TABS uses calendar to connect friends and businesses</string>
+	<key>NSCameraUsageDescription</key>
+	<string>TABS needs access to the camera to take photos for check-ins</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>TABS needs access to photos for check-ins and events</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>TABS needs access to location to show events near you.</string>
+	<key>RequestWhenInUseAuthorization</key>
+	<string>TABS needs access to location to show events near you.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>TABS needs access to location when in the background to get events near you.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>TABS needs access to location when open and in the background to show events near you.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>TABS needs access to contact to connect you with friends.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
+</dict>
+</plist>

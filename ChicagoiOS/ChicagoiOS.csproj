@@ -1,0 +1,670 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{101E3060-8799-4119-8A7A-4F86A01C0C84}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{edc1b0fa-90cd-4038-8fad-98fe74adb368}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Tabs.Mobile.ChicagoiOS</RootNamespace>
+    <AssemblyName>TABS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchSdkVersion>13.2</MtouchSdkVersion>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchFastDev>true</MtouchFastDev>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchSdkVersion>12.0</MtouchSdkVersion>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>
+    </CodesignEntitlements>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchSdkVersion>12.4</MtouchSdkVersion>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <CodesignProvision>TabsDevProfile</CodesignProvision>
+    <MtouchFastDev>true</MtouchFastDev>
+    <CodesignExtraArgs />
+    <CodesignResourceRules />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.9.2\lib\netstandard2.0\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="BCrypt.Net, Version=0.1.5073.29922, Culture=neutral, PublicKeyToken=6bcd409ee6bc9292, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt-Official.0.1.109\lib\BCrypt.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="BTProgressHUD, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BTProgressHUD.1.2.0.6\lib\Xamarin.iOS10\BTProgressHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AppCenter.2.0.0\lib\Xamarin.iOS10\Microsoft.AppCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AppCenter.Analytics.2.0.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AppCenter.Analytics.2.0.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AppCenter.Crashes.2.0.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AppCenter.Crashes.2.0.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AppCenter.2.0.0\lib\Xamarin.iOS10\Microsoft.AppCenter.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=9.3.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.9.3.3\lib\netstandard1.3\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK-1.0" />
+    <Reference Include="Plugin.Geolocator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugin.Geolocator.4.5.0.6\lib\xamarinios10\Plugin.Geolocator.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugin.Media.4.0.1.5\lib\xamarinios10\Plugin.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Plugin.Permissions.3.0.0.12\lib\xamarinios10\Plugin.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="Stripe.net, Version=25.19.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stripe.net.25.19.0\lib\netstandard2.0\Stripe.net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Xamarin.Azure.NotificationHubs.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Azure.NotificationHubs.iOS-updated.1.2.5.3\lib\Xamarin.iOS10\Xamarin.Azure.NotificationHubs.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Essentials, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Essentials.1.1.0\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-1201.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-401.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-402.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-581.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-801.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENSE.txt" />
+    <BundleResource Include="Resources\ic_home%401x.png" />
+    <BundleResource Include="Resources\ic_home%402x.png" />
+    <BundleResource Include="Resources\ic_home%403x.png" />
+    <BundleResource Include="Resources\ic_account_box%401x.png" />
+    <BundleResource Include="Resources\ic_account_box%402x.png" />
+    <BundleResource Include="Resources\ic_account_box%403x.png" />
+    <BundleResource Include="Resources\Profile\ic_person_white_48pt%401x.png" />
+    <BundleResource Include="Resources\Profile\ic_person_white_48pt%402x.png" />
+    <BundleResource Include="Resources\Profile\ic_person_white_48pt%403x.png" />
+    <BundleResource Include="Resources\Profile\photo_camera_white_18pt_%401x.png" />
+    <BundleResource Include="Resources\Profile\photo_camera_white_18pt_%402x.png" />
+    <BundleResource Include="Resources\Profile\photo_camera_white_18pt_%403x.png" />
+    <BundleResource Include="Resources\Toasters\contacts_black_18pt%401x.png" />
+    <BundleResource Include="Resources\Toasters\contacts_black_18pt%402x.png" />
+    <BundleResource Include="Resources\Toasters\contacts_black_18pt%403x.png" />
+    <BundleResource Include="Resources\ic_camera_enhance%401x.png" />
+    <BundleResource Include="Resources\ic_camera_enhance%402x.png" />
+    <BundleResource Include="Resources\ic_camera_enhance%403x.png" />
+    <BundleResource Include="Resources\Events\event%401x.png" />
+    <BundleResource Include="Resources\Events\event%402x.png" />
+    <BundleResource Include="Resources\Events\event%403x.png" />
+    <BundleResource Include="Resources\twotone_location24pt%401x.png" />
+    <BundleResource Include="Resources\twotone_location24pt%402x.png" />
+    <BundleResource Include="Resources\twotone_location24pt%403x.png" />
+    <BundleResource Include="Resources\Favorites\favorite_24pt%401x.png" />
+    <BundleResource Include="Resources\Favorites\favorite_24pt%402x.png" />
+    <BundleResource Include="Resources\Favorites\favorite_24pt%403x.png" />
+    <BundleResource Include="Resources\Favorites\favorite_border_24pt%401x.png" />
+    <BundleResource Include="Resources\Favorites\favorite_border_24pt%402x.png" />
+    <BundleResource Include="Resources\Favorites\favorite_border_24pt%403x.png" />
+    <BundleResource Include="Resources\share_24pt%401x.png" />
+    <BundleResource Include="Resources\share_24pt%402x.png" />
+    <BundleResource Include="Resources\share_24pt%403x.png" />
+    <BundleResource Include="Resources\Drinks\fastfood_24pt%401x.png" />
+    <BundleResource Include="Resources\Drinks\fastfood_24pt%402x.png" />
+    <BundleResource Include="Resources\Drinks\fastfood_24pt%403x.png" />
+    <BundleResource Include="Resources\tabs_custom.png" />
+    <BundleResource Include="Resources\tabs_custom%402x.png" />
+    <BundleResource Include="Resources\tabs_custom%403x.png" />
+    <BundleResource Include="Resources\tabs_splash_logo.png" />
+    <BundleResource Include="Resources\tabs_splash_logo%402x.png" />
+    <BundleResource Include="Resources\tabs_splash_logo%403x.png" />
+    <BundleResource Include="Resources\privacypolicy.txt" />
+    <BundleResource Include="Resources\termsofuse.txt" />
+    <BundleResource Include="Resources\Toasters\more_vert_black_24pt%401x.png" />
+    <BundleResource Include="Resources\Toasters\more_vert_black_24pt%402x.png" />
+    <BundleResource Include="Resources\Toasters\more_vert_black_24pt%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard">
+      <SubType>Designer</SubType>
+    </InterfaceDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Info.plist">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Entitlements.plist" />
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEditDiscountCodes.cs" />
+    <Compile Include="AddEditDiscountCodes.designer.cs">
+      <DependentUpon>AddEditDiscountCodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Individuals\BlockedUserCell.cs" />
+    <Compile Include="Cells\Individuals\BlockedUserCell.designer.cs">
+      <DependentUpon>BlockedUserCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\BlockedUsersController.cs" />
+    <Compile Include="Controllers\BlockedUsersController.designer.cs">
+      <DependentUpon>BlockedUsersController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\BusinessCheckInsCell.cs" />
+    <Compile Include="Cells\BusinessCheckInsCell.designer.cs">
+      <DependentUpon>BusinessCheckInsCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Business\BusinessCheckInsController.cs" />
+    <Compile Include="Controllers\Business\BusinessCheckInsController.designer.cs">
+      <DependentUpon>BusinessCheckInsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Business\BusinessImagesController.cs" />
+    <Compile Include="Controllers\Business\BusinessImagesController.designer.cs">
+      <DependentUpon>BusinessImagesController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Business\BusinessPhotoCollection.cs" />
+    <Compile Include="Controllers\Business\BusinessPhotoCollection.designer.cs">
+      <DependentUpon>BusinessPhotoCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Business\BusinessPhotosCollectionCell.cs" />
+    <Compile Include="Cells\Business\BusinessPhotosCollectionCell.designer.cs">
+      <DependentUpon>BusinessPhotosCollectionCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Business\BusinessRsvpCell.cs" />
+    <Compile Include="Cells\Business\BusinessRsvpCell.designer.cs">
+      <DependentUpon>BusinessRsvpCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Events\BusinessRsvpController.cs" />
+    <Compile Include="Controllers\Events\BusinessRsvpController.designer.cs">
+      <DependentUpon>BusinessRsvpController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Payment\AddPaymentController.cs" />
+    <Compile Include="Controllers\Payment\AddPaymentController.designer.cs">
+      <DependentUpon>AddPaymentController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Payments\CardsCell.cs" />
+    <Compile Include="Cells\Payments\CardsCell.designer.cs">
+      <DependentUpon>CardsCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Drinks\AddEditDrinksController.cs" />
+    <Compile Include="Controllers\Drinks\AddEditDrinksController.designer.cs">
+      <DependentUpon>AddEditDrinksController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Drinks\BusinessDrinksController.cs" />
+    <Compile Include="Controllers\Drinks\BusinessDrinksController.designer.cs">
+      <DependentUpon>BusinessDrinksController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Business\BusinessListNoLogoCell.cs" />
+    <Compile Include="Cells\Business\BusinessListNoLogoCell.designer.cs">
+      <DependentUpon>BusinessListNoLogoCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Business\BusinessListCell.cs" />
+    <Compile Include="Cells\Business\BusinessListCell.designer.cs">
+      <DependentUpon>BusinessListCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Business\BusinessListController.cs" />
+    <Compile Include="Controllers\Business\BusinessListController.designer.cs">
+      <DependentUpon>BusinessListController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Business\BusinessEventCell.cs" />
+    <Compile Include="Cells\Business\BusinessEventCell.designer.cs">
+      <DependentUpon>BusinessEventCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\CheckIn\CheckInController.cs" />
+    <Compile Include="Controllers\CheckIn\CheckInController.designer.cs">
+      <DependentUpon>CheckInController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Business\BusinessEventController.cs" />
+    <Compile Include="Controllers\Business\BusinessEventController.designer.cs">
+      <DependentUpon>BusinessEventController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessMoreController.cs" />
+    <Compile Include="BusinessMoreController.designer.cs">
+      <DependentUpon>BusinessMoreController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Business\BusinessProfileCell.cs" />
+    <Compile Include="Cells\Business\BusinessProfileCell.designer.cs">
+      <DependentUpon>BusinessProfileCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Business\BusinessProfileController.cs" />
+    <Compile Include="Controllers\Business\BusinessProfileController.designer.cs">
+      <DependentUpon>BusinessProfileController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Business\BusinessInfoCellThree.cs" />
+    <Compile Include="Cells\Business\BusinessInfoCellThree.designer.cs">
+      <DependentUpon>BusinessInfoCellThree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Business\BusinessInfoCellOne.cs" />
+    <Compile Include="Cells\Business\BusinessInfoCellOne.designer.cs">
+      <DependentUpon>BusinessInfoCellOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Business\BusinessInfoCellTwo.cs" />
+    <Compile Include="Cells\Business\BusinessInfoCellTwo.designer.cs">
+      <DependentUpon>BusinessInfoCellTwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Business\BusinessHomeController.cs" />
+    <Compile Include="Controllers\Business\BusinessHomeController.designer.cs">
+      <DependentUpon>BusinessHomeController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Business\BusinessRegistrationController.cs" />
+    <Compile Include="Controllers\Business\BusinessRegistrationController.designer.cs">
+      <DependentUpon>BusinessRegistrationController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSource\Business\BusinessCheckInsDataSource.cs" />
+    <Compile Include="DataSource\Business\BusinessImagesDataSource.cs" />
+    <Compile Include="DataSource\Business\BusinessListDataSource.cs" />
+    <Compile Include="DataSource\Business\BusinessRsvpDataSource.cs" />
+    <Compile Include="DataSource\Business\Events\BusinessEventsDataSource.cs" />
+    <Compile Include="DataSource\Business\BusinessProfileDataSource.cs" />
+    <Compile Include="DataSource\Business\Events\EventNameDataSource.cs" />
+    <Compile Include="DataSource\Business\Events\EventsInfoDataSource.cs" />
+    <Compile Include="DataSource\Business\Events\OtherEventInfoDataSource.cs" />
+    <Compile Include="DataSource\Business\RegisterBusinessDataSource.cs" />
+    <Compile Include="DataSource\Drinks\DrinksDataSource.cs" />
+    <Compile Include="DataSource\Drinks\SendDrinkDataSource.cs" />
+    <Compile Include="DataSource\Individuals\BlockedUserDataSource.cs" />
+    <Compile Include="DataSource\Individuals\EditToasterProfileDataSource.cs" />
+    <Compile Include="DataSource\Individuals\Events\LiveEventsDataSource.cs" />
+    <Compile Include="DataSource\CheckIns\LiveToastersDataSource.cs" />
+    <Compile Include="DataSource\Individuals\Events\ToastersEventDataSource.cs" />
+    <Compile Include="DataSource\Individuals\InviteContactDataSource.cs" />
+    <Compile Include="DataSource\Individuals\ToasterPhotosDataSource.cs" />
+    <Compile Include="DataSource\Individuals\ToastersDataSource.cs" />
+    <Compile Include="DataSource\Individuals\ToastersMoreDataSource.cs" />
+    <Compile Include="DataSource\Individuals\ToastersSearchDataSource.cs" />
+    <Compile Include="DataSource\Orders\OrderDetailsDataSource.cs" />
+    <Compile Include="DataSource\Orders\OrdersDataSource.cs" />
+    <Compile Include="DataSource\Payments\PaymentMethodsDataSource.cs" />
+    <Compile Include="DataSource\Reports\InappropraiteOptionsDatasource.cs" />
+    <Compile Include="DataSource\SignUpDataSource.cs" />
+    <Compile Include="DataSource\Points\ToasterPointsDataSource.cs" />
+    <Compile Include="Delegates\BusinessPhotoDelegate.cs" />
+    <Compile Include="Delegates\UserNotificationCenterDelegate.cs" />
+    <Compile Include="Controllers\LoginViewController.cs" />
+    <Compile Include="Controllers\LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Individuals\EditToasterProfileController.cs" />
+    <Compile Include="Controllers\Individuals\EditToasterProfileController.designer.cs">
+      <DependentUpon>EditToasterProfileController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Individuals\EditToasterSwitchCell.cs" />
+    <Compile Include="Cells\Individuals\EditToasterSwitchCell.designer.cs">
+      <DependentUpon>EditToasterSwitchCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Individuals\EditToasterTxtFieldCell.cs" />
+    <Compile Include="Cells\Individuals\EditToasterTxtFieldCell.designer.cs">
+      <DependentUpon>EditToasterTxtFieldCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Business\EventNameDescController.cs" />
+    <Compile Include="Controllers\Business\EventNameDescController.designer.cs">
+      <DependentUpon>EventNameDescController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Business\EventTextFieldCell.cs" />
+    <Compile Include="Cells\Business\EventTextFieldCell.designer.cs">
+      <DependentUpon>EventTextFieldCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Individuals\EventDescriptionCell.cs" />
+    <Compile Include="Cells\Individuals\EventDescriptionCell.designer.cs">
+      <DependentUpon>EventDescriptionCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Individuals\EventInfoCell.cs" />
+    <Compile Include="Cells\Individuals\EventInfoCell.designer.cs">
+      <DependentUpon>EventInfoCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Business\EventInfoController.cs" />
+    <Compile Include="Controllers\Business\EventInfoController.designer.cs">
+      <DependentUpon>EventInfoController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Drinks\DrinksCell.cs" />
+    <Compile Include="Cells\Drinks\DrinksCell.designer.cs">
+      <DependentUpon>DrinksCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Drinks\DrinkQuantityController.cs" />
+    <Compile Include="Controllers\Drinks\DrinkQuantityController.designer.cs">
+      <DependentUpon>DrinkQuantityController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiscountCodesCell.cs" />
+    <Compile Include="DiscountCodesCell.designer.cs">
+      <DependentUpon>DiscountCodesCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiscountCodesController.cs" />
+    <Compile Include="DiscountCodesController.designer.cs">
+      <DependentUpon>DiscountCodesController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ContactService.cs" />
+    <Compile Include="Helpers\ToastTime.cs" />
+    <Compile Include="Controllers\Individuals\IndividualHomeController.cs" />
+    <Compile Include="Controllers\Individuals\IndividualHomeController.designer.cs">
+      <DependentUpon>IndividualHomeController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Individuals\LiveToastersEventsController.cs" />
+    <Compile Include="Controllers\Individuals\LiveToastersEventsController.designer.cs">
+      <DependentUpon>LiveToastersEventsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Individuals\LiveEventsCell.cs" />
+    <Compile Include="Cells\Individuals\LiveEventsCell.designer.cs">
+      <DependentUpon>LiveEventsCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Individuals\LiveToastersCell.cs" />
+    <Compile Include="Cells\Individuals\LiveToastersCell.designer.cs">
+      <DependentUpon>LiveToastersCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Individuals\InviteContactCell.cs" />
+    <Compile Include="Cells\Individuals\InviteContactCell.designer.cs">
+      <DependentUpon>InviteContactCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Individuals\InviteContactController.cs" />
+    <Compile Include="Controllers\Individuals\InviteContactController.designer.cs">
+      <DependentUpon>InviteContactController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomeController.designer.cs">
+      <DependentUpon>HomeController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Reports\InappropraiteOptionsController.cs" />
+    <Compile Include="Controllers\Reports\InappropraiteOptionsController.designer.cs">
+      <DependentUpon>InappropraiteOptionsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Reports\InappropriateReportCell.cs" />
+    <Compile Include="Cells\Reports\InappropriateReportCell.designer.cs">
+      <DependentUpon>InappropriateReportCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Controllers\NavController.cs" />
+    <Compile Include="Controllers\NavController.designer.cs">
+      <DependentUpon>NavController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\MoreCell.cs" />
+    <Compile Include="Cells\MoreCell.designer.cs">
+      <DependentUpon>MoreCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Business\OtherEventInfoCell.cs" />
+    <Compile Include="Cells\Business\OtherEventInfoCell.designer.cs">
+      <DependentUpon>OtherEventInfoCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Business\OtherEventInfoController.cs" />
+    <Compile Include="Controllers\Business\OtherEventInfoController.designer.cs">
+      <DependentUpon>OtherEventInfoController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Business\MyPickerController.cs" />
+    <Compile Include="Controllers\Business\MyPickerController.designer.cs">
+      <DependentUpon>MyPickerController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Business\OtherEventInfoCellTwo.cs" />
+    <Compile Include="Cells\Business\OtherEventInfoCellTwo.designer.cs">
+      <DependentUpon>OtherEventInfoCellTwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PickerViewModel.cs" />
+    <Compile Include="Controllers\Payment\PaymentMethodController.cs" />
+    <Compile Include="Controllers\Payment\PaymentMethodController.designer.cs">
+      <DependentUpon>PaymentMethodController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Orders\OrderDetailsCell.cs" />
+    <Compile Include="Cells\Orders\OrderDetailsCell.designer.cs">
+      <DependentUpon>OrderDetailsCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Orders\OrderDetailsController.cs" />
+    <Compile Include="Controllers\Orders\OrderDetailsController.designer.cs">
+      <DependentUpon>OrderDetailsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Orders\OrdersCell.cs" />
+    <Compile Include="Cells\Orders\OrdersCell.designer.cs">
+      <DependentUpon>OrdersCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Orders\OrdersController.cs" />
+    <Compile Include="Controllers\Orders\OrdersController.designer.cs">
+      <DependentUpon>OrdersController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Individuals\MyImageViewController.cs" />
+    <Compile Include="Controllers\Individuals\MyImageViewController.designer.cs">
+      <DependentUpon>MyImageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\PrivacyPolicyController.cs" />
+    <Compile Include="Controllers\PrivacyPolicyController.designer.cs">
+      <DependentUpon>PrivacyPolicyController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reachability.cs" />
+    <Compile Include="Controllers\RootViewController.cs" />
+    <Compile Include="Controllers\RootViewController.designer.cs">
+      <DependentUpon>RootViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SignUpController.cs" />
+    <Compile Include="Controllers\SignUpController.designer.cs">
+      <DependentUpon>SignUpController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\SignUpItemCell.cs" />
+    <Compile Include="Cells\SignUpItemCell.designer.cs">
+      <DependentUpon>SignUpItemCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\UserTypeCell.cs" />
+    <Compile Include="Cells\UserTypeCell.designer.cs">
+      <DependentUpon>UserTypeCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\BaseViewController.cs" />
+    <Compile Include="Controllers\BaseViewController.designer.cs">
+      <DependentUpon>BaseViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Individuals\ToasterMoreController.cs" />
+    <Compile Include="Controllers\Individuals\ToasterMoreController.designer.cs">
+      <DependentUpon>ToasterMoreController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Individuals\ToasterProfileController.cs" />
+    <Compile Include="Controllers\Individuals\ToasterProfileController.designer.cs">
+      <DependentUpon>ToasterProfileController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Individuals\ToastersSearchViewController.cs" />
+    <Compile Include="Controllers\Individuals\ToastersSearchViewController.designer.cs">
+      <DependentUpon>ToastersSearchViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Individuals\ToastersSearchCell.cs" />
+    <Compile Include="Cells\Individuals\ToastersSearchCell.designer.cs">
+      <DependentUpon>ToastersSearchCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ResetPasswordController.cs" />
+    <Compile Include="Controllers\ResetPasswordController.designer.cs">
+      <DependentUpon>ResetPasswordController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Individuals\ToastersCell.cs" />
+    <Compile Include="Cells\Individuals\ToastersCell.designer.cs">
+      <DependentUpon>ToastersCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Individuals\ToastersController.cs" />
+    <Compile Include="Controllers\Individuals\ToastersController.designer.cs">
+      <DependentUpon>ToastersController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\TextFieldInputController.cs" />
+    <Compile Include="Controllers\TextFieldInputController.designer.cs">
+      <DependentUpon>TextFieldInputController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Individuals\ToastersEventController.cs" />
+    <Compile Include="Controllers\Individuals\ToastersEventController.designer.cs">
+      <DependentUpon>ToastersEventController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Individuals\ToastersEventsCell.cs" />
+    <Compile Include="Cells\Individuals\ToastersEventsCell.designer.cs">
+      <DependentUpon>ToastersEventsCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Drinks\SendDrinkController.cs" />
+    <Compile Include="Controllers\Drinks\SendDrinkController.designer.cs">
+      <DependentUpon>SendDrinkController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Drinks\ToasterDrinksController.cs" />
+    <Compile Include="Controllers\Drinks\ToasterDrinksController.designer.cs">
+      <DependentUpon>ToasterDrinksController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Individuals\ToasterPhotoCollection.cs" />
+    <Compile Include="Controllers\Individuals\ToasterPhotoCollection.designer.cs">
+      <DependentUpon>ToasterPhotoCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Individuals\ToasterPhotoCollectionCell.cs" />
+    <Compile Include="Cells\Individuals\ToasterPhotoCollectionCell.designer.cs">
+      <DependentUpon>ToasterPhotoCollectionCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Points\ToasterPointCell.cs" />
+    <Compile Include="Cells\Points\ToasterPointCell.designer.cs">
+      <DependentUpon>ToasterPointCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Points\ToasterPointsController.cs" />
+    <Compile Include="Controllers\Points\ToasterPointsController.designer.cs">
+      <DependentUpon>ToasterPointsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\TermsOfUseController.cs" />
+    <Compile Include="Controllers\TermsOfUseController.designer.cs">
+      <DependentUpon>TermsOfUseController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToasterProfileHeaderCell.cs" />
+    <Compile Include="ToasterProfileHeaderCell.designer.cs">
+      <DependentUpon>ToasterProfileHeaderCell.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo%402x" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Logo%403x.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="..\ChicagoSharedProject\ChicagoSharedProject.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
+  </Target>
+</Project>

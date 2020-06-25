@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_color">
+        <RelativeLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color"
+            android:id="@+id/cardViewRelative">
+			 <ImageView
+            android:src="@drawable/ic_person_white_48dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/profilePic"
+            android:clickable="false"
+            android:layout_marginTop="16dp"
+			android:layout_marginLeft="16dp"
+            android:layout_gravity="center_horizontal"
+			android:layout_alignParentLeft="true"/>
+            <TextView
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:textSize="14dp"
+                android:textColor="@color/near_black"
+				android:layout_toRightOf="@+id/profilePic"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp" />
+            <TextView
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/location"
+                android:textSize="14dp"
+                android:textColor="@color/near_black"
+                android:gravity="left"
+				android:layout_toRightOf="@+id/profilePic"
+				android:layout_below="@+id/name"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:ellipsize="end" />
+            <Button
+                android:text="Toaster Request"
+                android:layout_width="170dp"
+                android:layout_height="30dp"
+                android:id="@+id/toasterRequest"
+                android:gravity="center"
+			    android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:typeface="normal"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                android:textColor="@color/rbs_font_color"
+                android:background="@drawable/rbs_selector"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/location"
+                android:layout_toRightOf="@+id/profilePic"
+                android:elevation="15dp" />
+		 <TextView
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/headline"
+                android:textSize="14dp"
+                android:textColor="@color/near_black"
+                android:gravity="left"
+				android:layout_below="@+id/toasterRequest"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp" />
+        </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#91c8f4</color>
+    <color name="colorPrimaryDark">#1B3147</color>
+    <color name="colorAccent">#3498db</color>
+  <color name="white">#FFFFFF</color>
+  <color name="background_color">#f7f7f5</color>
+  <color name="near_black">#222222</color>
+  <color name="light_grey">#DFDFDF</color>
+  <color name="grey">#AAAAAA</color>
+  <color name="dark_grey">#666666</color>
+  <color name="red_ish">#B31B20</color>
+
+  <!--Nav Bar-->
+  <color name="nav_bar_text_selected">#91c8f4</color>
+  <color name="nav_bar_text_unselected">#212121</color>
+  <color name="nav_bar_list_selected">#eeeeee</color>
+
+  <!--raised button primary(rbp)-->
+  <color name="rbp_normal_bg_color">#91c8f4</color>
+  <color name="rbp_pressed_bg_color">#008975</color>
+  <color name="rbp_font_color">#ffffff</color>
+
+  <!--raised button secondary(rbp)-->
+  <color name="rbs_normal_bg_color">#ffffff</color>
+  <color name="rbs_pressed_bg_color">#bfc1ce</color>
+  <color name="rbs_font_color">#91c8f4</color>
+
+  <!--flat button primary-->
+  <color name="fbp_normal_bgcolor">#91c8f4</color>
+  <color name="fbp_pressed_bgcolor">#008975</color>
+  <color name="fbp_font_bgcolor">#ffffff</color>
+
+  <!--flat button secondary-->
+  <color name="fbs_pressed_bgcolor">#bfc1ce</color>
+  <color name="fbs_font_bgcolor">#91c8f4</color>
+
+  <!--Dimen-->
+  <dimen name="corner_radius">4dp</dimen>
+  <dimen name="layer_padding">1dp</dimen>
+
+  <!--text-->
+  <color name="text_heading_color">#91c8f4</color>
+  <color name="text_heading_color_small">#ed8721</color>
+  <color name="body_paragraph_color">#494a5c</color>
+
+  <!-- List Item (Single line list) -->
+  <color name ="single_line_list_color">#d9d9d8</color> <!--73,74,92 -->
+  <color name ="two_line_list_sec_color">#7b7f9f</color> <!--123, 127, 159-->
+  <color name="list_item_pressed">#e7e7ea</color>
+  
+</resources>

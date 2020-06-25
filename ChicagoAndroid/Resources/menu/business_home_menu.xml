@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item
+      android:id="@+id/menu_home"
+      android:enabled="true"
+      android:icon="@drawable/baseline_home_black_24"
+      android:title="Overview"
+      app:showAsAction="always" />
+  <item
+      android:id="@+id/menu_events"
+      android:enabled="true"
+      android:icon="@drawable/baseline_event_black_24"
+      android:title="Events"
+      app:showAsAction="always" />
+   <item
+      android:id="@+id/menu_orders"
+      android:enabled="true"
+      android:icon="@drawable/baseline_home_black_24"
+      android:title="Orders"
+      app:showAsAction="always" /> 
+   <item
+      android:id="@+id/menu_drinks"
+      android:enabled="true"
+      android:icon="@drawable/fastfood_black_24"
+      android:title="Drinks"
+      app:showAsAction="always" /> 
+  <item
+      android:id="@+id/menu_more"
+      android:enabled="true"
+      android:icon="@drawable/baseline_more_horiz_black_24"
+      android:title="More"
+      app:showAsAction="always" />
+</menu>

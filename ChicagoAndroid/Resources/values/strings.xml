@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">TABS</string>
+    <string name="action_settings">Settings</string>
+  <string name="drawer_open">Open navigation drawer</string>
+  <string name="drawer_close">Close navigation drawer</string>
+  <string name="toaster_request">Toaster Request</string>
+  <string name="terms_policy_text_1">By signing up, you agree to our</string>
+  <string name="terms_policy_text_2">Terms of Use</string>
+  <string name="terms_policy_text_3">and</string>
+  <string name="terms_policy_text_4">Privacy Policy</string>
+  <!--Home screen-->
+  <string name="welcome">Welcome to TABS!</string>
+  <string name="home_message">Find live events in your area, connect with friends and send drinks to live Toasters(friends).</string>
+    <string name="unblock">Unblock</string>
+
+  <!-- Login -->
+  <!--Login screen-->
+  <string name="login_text">Login</string>
+  <string name="sign_up_text">Sign up</string>
+  <string name="continue_text">Continue</string>
+  <string name="reset_password">Forgot password?</string>
+  <string name="verify_acct_text">Please check email for verification code.</string>
+    <string name="save">Save</string>
+  
+  <!--Events-->
+  <string name="start_date">Select start date</string>
+  <string name="start_time">Select start time</string>
+  <string name="end_date">Select end date</string>
+  <string name="end_time">Select end time</string>
+  <string name="swipe_to_continue">Swipe to continue</string>
+
+  <string name="event_type">Select Event Type</string>
+  <string name="event_category">Select Event Category</string>
+  <string name="check_in">Check-In</string>
+
+  <string name="start_tab">Start Tab</string>
+  <string name="drink_payment_disclaimer">Payment will be processed when drink is picked up</string>
+
+  <string name="send_drink">Send Drink</string>
+
+  <string name="report_post">Report Post</string>
+  <string name="report_user">Report User</string>
+  <string name="block_user">Block</string>
+  <string name="unfollow_user">Unfollow</string>
+
+</resources>

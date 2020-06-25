@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="4dp"
+    android:id="@+id/eventsHomeCard"
+    app:cardUseCompatPadding="false"
+    app:cardBackgroundColor="@color/background_color"
+    android:foreground="?android:attr/selectableItemBackground">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color"
+        android:id="@+id/eventsListLayout">
+        <TextView
+            android:text="title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventTitle"
+            android:textSize="16dp"
+            android:textColor="@color/body_paragraph_color"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:singleLine="true"
+			android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp" />      
+        <TextView
+            android:text="description"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventDescription"
+            android:textSize="14dp"
+            android:textColor="@color/two_line_list_sec_color"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_below="@+id/eventTitle" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/carddivider"
+            android:background="@color/single_line_list_color"
+            android:layout_below="@+id/eventDescription" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_color">
+    <TextView
+        android:text="@string/report_post"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reportPost"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:textSize="14sp"
+        android:textColor="@color/red_ish"/>
+   <TextView
+        android:text="@string/report_user"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reportUser"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:textSize="14sp"
+        android:textColor="@color/red_ish"/>
+    <TextView
+        android:text="@string/block_user"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockUser"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:textSize="14sp"
+        android:textColor="@color/near_black"/>
+    <TextView
+        android:text="@string/unfollow_user"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/unfollowUser"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:textSize="14sp"
+        android:textColor="@color/near_black"/>
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<TextView
+            android:text="@string/swipe_to_continue"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/startTime"
+            android:editable="false"
+            android:singleLine="true"
+			android:clickable="true"
+		    android:layout_marginLeft="8dp"
+			android:layout_marginRight="32dp"
+			 android:layout_marginTop="20dp"
+            android:textColor="@color/rbp_normal_bg_color"
+            android:textSize="20sp"
+            android:typeface="normal" />
+</LinearLayout>
