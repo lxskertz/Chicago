@@ -23,6 +23,15 @@ namespace Tabs.Mobile.ChicagoAndroid.MyNotificationsService
 
         private const string TAG = "MyFirebaseMsgService";
 
+        public override void OnNewToken(string token)
+        {
+            base.OnNewToken(token);
+            //var refreshedToken = token;
+            //Log.Debug(TAG, "FCM token: " + refreshedToken);
+            Activities.BaseActivity.CurrentActivity.MyPreferences.SavePnsHandle(token);
+            Activities.BaseActivity.CurrentActivity.MyPreferences.SavePnsHandleUpdated(true);
+        }
+
         public override void OnMessageReceived(RemoteMessage message)
         {
             Log.Debug(TAG, "From: " + message.From);

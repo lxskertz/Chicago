@@ -342,7 +342,7 @@ namespace Tabs.Mobile.ChicagoAndroid.Fragments.Orders
             {
                 var a = ex;
                 this.HomeContext.ShowProgressbar(false, "", ToastMessage.Charging);
-                Toast.MakeText(this.HomeContext, ToastMessage.ServerError, ToastLength.Short).Show();
+                Toast.MakeText(this.HomeContext, ex.Message, ToastLength.Short).Show();
             }
 
         }

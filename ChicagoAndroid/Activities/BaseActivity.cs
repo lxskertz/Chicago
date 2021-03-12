@@ -184,8 +184,9 @@ namespace Tabs.Mobile.ChicagoAndroid.Activities
                     if (this.CheckNetworkConnectivity() != null && this.MyPreferences.IsPnsHandleUpdated())
                     {
 
-                        App.PnsHandle = string.IsNullOrEmpty(registrationId) ?
-                            Firebase.Iid.FirebaseInstanceId.Instance.Token : registrationId;
+                        App.PnsHandle = registrationId;
+                            //string.IsNullOrEmpty(registrationId) ?
+                            //Firebase.Iid.FirebaseInstanceId.Instance.Token : registrationId;
 
                         deviceRegistration.Handle = App.PnsHandle;
                         App.PnsHandle = registrationId;

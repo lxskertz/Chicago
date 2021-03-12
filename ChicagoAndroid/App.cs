@@ -38,8 +38,8 @@ namespace Tabs.Mobile.ChicagoAndroid
         public static string channelName = "Tabs Channel";
 
         public static string city = "Chicago";
-        public static string zipCode = "60616";
-        public static string state = "";
+        public static string zipCode = "60653";
+        public static string state = "Illinois";
 
         #endregion
 

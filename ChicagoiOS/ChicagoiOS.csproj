@@ -13,6 +13,7 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <ProvisioningType>manual</ProvisioningType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -56,9 +57,10 @@
     </CodesignEntitlements>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <MtouchSdkVersion>12.4</MtouchSdkVersion>
+    <MtouchSdkVersion>14.4</MtouchSdkVersion>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <CodesignProvision>TabsDevProfile</CodesignProvision>
+    <CodesignProvision>
+    </CodesignProvision>
     <MtouchFastDev>true</MtouchFastDev>
     <CodesignExtraArgs />
     <CodesignResourceRules />

@@ -217,59 +217,66 @@ namespace Tabs.Mobile.ChicagoiOS
 
         private async void DoCheckIn()
         {
-            var individual = await AppDelegate.IndividualFactory.GetToasterByUserId(AppDelegate.CurrentUser.UserId);
-
-            CheckIn checkin = new CheckIn();
-            checkin.UserId = AppDelegate.CurrentUser.UserId;
-            checkin.IndividualId = individual != null ? individual.IndividualId : 0;
-            checkin.EventId = CheckInType == CheckIn.CheckInTypes.Event ? this.BusinessEvent.EventId : 0;
-            checkin.BusinessId = CheckInType == CheckIn.CheckInTypes.Business ? this.BusinessInfo.BusinessId : this.BusinessEvent.BusinessId;
-            checkin.CheckInType = CheckInType;
-            checkin.CheckInDate = DateTime.Now;
-            checkin.CheckedIn = true;
-            checkin.Username = AppDelegate.CurrentUser.Username;
-            checkin.FirstName = AppDelegate.CurrentUser.FirstName;
-            checkin.LastName = AppDelegate.CurrentUser.LastName;
-
-            if (this.CheckInType == CheckIn.CheckInTypes.Event)
+            try
             {
-                var business = await AppDelegate.BusinessFactory.Get(this.BusinessEvent.BusinessId);
+                var individual = await AppDelegate.IndividualFactory.GetToasterByUserId(AppDelegate.CurrentUser.UserId);
 
-                if (business != null)
+                CheckIn checkin = new CheckIn();
+                checkin.UserId = AppDelegate.CurrentUser.UserId;
+                checkin.IndividualId = individual != null ? individual.IndividualId : 0;
+                checkin.EventId = CheckInType == CheckIn.CheckInTypes.Event ? this.BusinessEvent.EventId : 0;
+                checkin.BusinessId = CheckInType == CheckIn.CheckInTypes.Business ? this.BusinessInfo.BusinessId : this.BusinessEvent.BusinessId;
+                checkin.CheckInType = CheckInType;
+                checkin.CheckInDate = DateTime.Now;
+                checkin.CheckedIn = true;
+                checkin.Username = AppDelegate.CurrentUser.Username;
+                checkin.FirstName = AppDelegate.CurrentUser.FirstName;
+                checkin.LastName = AppDelegate.CurrentUser.LastName;
+
+                if (this.CheckInType == CheckIn.CheckInTypes.Event)
                 {
-                    checkin.BusinessName = business.BusinessName;
+                    var business = await AppDelegate.BusinessFactory.Get(this.BusinessEvent.BusinessId);
+
+                    if (business != null)
+                    {
+                        checkin.BusinessName = business.BusinessName;
+                    }
                 }
-            }
-            else
-            {
-                if (BusinessInfo != null)
+                else
                 {
-                    checkin.BusinessName = this.BusinessInfo.BusinessName;
+                    if (BusinessInfo != null)
+                    {
+                        checkin.BusinessName = this.BusinessInfo.BusinessName;
+                    }
                 }
-            }
 
-            var id = await AppDelegate.CheckInFactory.CheckIn(checkin);
+                var id = await AppDelegate.CheckInFactory.CheckIn(checkin);
 
-            if (id > 0)
+                if (id > 0)
+                {
+                    await AddCheckInImage(id);
+
+                    Shared.Models.Points.Point point = new Shared.Models.Points.Point();
+                    point.UserId = AppDelegate.CurrentUser.UserId;
+                    point.PointStatus = Shared.Models.Points.Point.ToasterPointStatus.Earned;
+                    point.EarnedDate = DateTime.Now;
+                    point.RedeemedDate = null;
+                    point.PointAmount = (int)Shared.Models.Points.Point.PointAmountScale.CheckIn;
+                    await AppDelegate.ToasterPointsFactory.NewDailyPoint(point);
+                    await new PushNotificationHelper(AppDelegate.NotificationRegisterFactory, PushNotificationHelper.PushPlatform.iOS).NewPointsPush(point.UserId);
+                }
+
+                BTProgressHUD.Dismiss();
+
+                LiveToastersEventsController.RequiresRefresh = true;
+                this.NavigationController.PopViewController(true);
+
+                BTProgressHUD.Dismiss();
+            } catch(Exception ex)
             {
-                await AddCheckInImage(id);
-
-                Shared.Models.Points.Point point = new Shared.Models.Points.Point();
-                point.UserId = AppDelegate.CurrentUser.UserId;
-                point.PointStatus = Shared.Models.Points.Point.ToasterPointStatus.Earned;
-                point.EarnedDate = DateTime.Now;
-                point.RedeemedDate = null;
-                point.PointAmount = (int)Shared.Models.Points.Point.PointAmountScale.CheckIn;
-                await AppDelegate.ToasterPointsFactory.NewDailyPoint(point);
-                await new PushNotificationHelper(AppDelegate.NotificationRegisterFactory, PushNotificationHelper.PushPlatform.iOS).NewPointsPush(point.UserId);
+                var a = ex;
+                BTProgressHUD.Dismiss();
             }
-
-            BTProgressHUD.Dismiss();
-
-            LiveToastersEventsController.RequiresRefresh = true;
-            this.NavigationController.PopViewController(true);
-
-            BTProgressHUD.Dismiss();
         }
 
         partial void CheckInBtn_TouchUpInside(UIButton sender)

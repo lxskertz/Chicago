@@ -422,7 +422,7 @@ namespace Tabs.Mobile.ChicagoiOS
             catch (Exception ex)
             {
                 var a = ex;
-                BTProgressHUD.ShowErrorWithStatus(ToastMessage.ServerError, Helpers.ToastTime.SuccessTime);
+                BTProgressHUD.ShowErrorWithStatus(ex.Message, Helpers.ToastTime.SuccessTime);
             }
 
         }

@@ -482,6 +482,7 @@ namespace Tabs.Mobile.ChicagoAndroid.Activities.Drinks
                 toasterOrder.SalesTax = 0;
                 toasterOrder.StripeFee = 0;
                 toasterOrder.CardChargeAmount = 0;
+                toasterOrder.Quantity = SendDrinkHelper.GetDrinkQuantity(quantity.Text);
 
                 await App.ToasterOrderFactory.New(toasterOrder);
 
@@ -546,6 +547,7 @@ namespace Tabs.Mobile.ChicagoAndroid.Activities.Drinks
                 toasterOrder.SalesTax = 0;
                 toasterOrder.StripeFee = stripeFee;
                 toasterOrder.CardChargeAmount = totalAmount - stripeFee;
+                toasterOrder.Quantity = SendDrinkHelper.GetDrinkQuantity(quantity.Text);
 
                 if (usePoint)
                 {
