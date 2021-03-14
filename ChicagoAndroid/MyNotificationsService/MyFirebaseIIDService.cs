@@ -19,10 +19,10 @@
 //            {
 //                var refreshedToken = FirebaseInstanceId.Instance.Token;
 //                //Log.Debug(TAG, "FCM token: " + refreshedToken);
-//                //Activities.BaseActivity.CurrentActivity.MyPreferences.SavePnsHandle(refreshedToken);
+//                Activities.BaseActivity.CurrentActivity.MyPreferences.SavePnsHandle(refreshedToken);
 //                Activities.BaseActivity.CurrentActivity.MyPreferences.SavePnsHandleUpdated(true);
 //            }
-//            catch(Exception)
+//            catch (Exception)
 //            {
 //            }
 //        }

@@ -16,7 +16,7 @@ using Build = Android.OS.Build;
 
 namespace Tabs.Mobile.ChicagoAndroid.MyNotificationsService
 {
-    [Service]
+    [Service (Name = "com.toastingandbeingsocial.tabsdev.MyFirebaseMessagingService")]
     [IntentFilter(new[] { "com.google.firebase.MESSAGING_EVENT" })]
     public class MyFirebaseMessagingService : FirebaseMessagingService
     {
@@ -26,8 +26,6 @@ namespace Tabs.Mobile.ChicagoAndroid.MyNotificationsService
         public override void OnNewToken(string token)
         {
             base.OnNewToken(token);
-            //var refreshedToken = token;
-            //Log.Debug(TAG, "FCM token: " + refreshedToken);
             Activities.BaseActivity.CurrentActivity.MyPreferences.SavePnsHandle(token);
             Activities.BaseActivity.CurrentActivity.MyPreferences.SavePnsHandleUpdated(true);
         }
@@ -38,7 +36,7 @@ namespace Tabs.Mobile.ChicagoAndroid.MyNotificationsService
             if (message.GetNotification() != null)
             {
                 //These is how most messages will be received
-                Log.Debug(TAG, "Notification Message Body: " + message.GetNotification().Body);
+                //Log.Debug(TAG, "Notification Message Body: " + message.GetNotification().Body);
                 SendNotification(message.GetNotification().Body);
             }
             else

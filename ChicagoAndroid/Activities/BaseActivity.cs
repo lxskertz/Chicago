@@ -535,9 +535,9 @@ namespace Tabs.Mobile.ChicagoAndroid.Activities
             ISharedPreferencesEditor editor = prefs.Edit();
             editor.Remove(environment);
             editor.Remove(currentUserPref);
-            editor.Remove(NotificationRegId);
-            editor.Remove(PnsHandle);
-            editor.Remove(PnsHandleRefreshed);
+            //editor.Remove(NotificationRegId);
+            //editor.Remove(PnsHandle);
+            //editor.Remove(PnsHandleRefreshed);
             editor.Apply();
         }
 
