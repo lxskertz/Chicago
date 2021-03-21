@@ -364,6 +364,9 @@ namespace Tabs.Mobile.ChicagoiOS
                 BTProgressHUD.Show(ToastMessage.Charging, -1f, ProgressHUD.MaskType.Black);
 
                 var order = await AppDelegate.ToasterOrderFactory.GetByOrderId(item.ToasterOrderId);
+                var businessInfo = await AppDelegate.BusinessFactory.GetByUserId(AppDelegate.CurrentUser.UserId);
+                string businessName = businessInfo != null ? businessInfo?.BusinessName : "";
+
                 if (order != null && !order.Cancelled && !item.Charged)
                 {
 
@@ -372,7 +375,7 @@ namespace Tabs.Mobile.ChicagoiOS
                     if (stripeCustomerInfo != null)
                     {
                         item.CardChargeAmount = Math.Round(item.TotalOrderAmount - item.StripeFee, 2);
-                        var charge = await AppDelegate.CustomerPaymentInfoFactory.ChargeCustomer(stripeCustomerInfo.StripeCustomerId, item.CardChargeAmount, "");
+                        var charge = await AppDelegate.CustomerPaymentInfoFactory.ChargeCustomer(stripeCustomerInfo.StripeCustomerId, item.CardChargeAmount, "", businessName);
 
                         if (charge != null && charge.Paid)
                         {
@@ -422,7 +425,7 @@ namespace Tabs.Mobile.ChicagoiOS
             catch (Exception ex)
             {
                 var a = ex;
-                BTProgressHUD.ShowErrorWithStatus(ToastMessage.ServerError, Helpers.ToastTime.SuccessTime);
+                BTProgressHUD.ShowErrorWithStatus(ex.Message, Helpers.ToastTime.SuccessTime);
             }
 
         }

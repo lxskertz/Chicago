@@ -100,6 +100,10 @@ namespace Tabs.Mobile.ChicagoiOS.DataSource.Orders
                         cell.TextLabel.Text = AppText.FromBusiness;
                         cell.DetailTextLabel.Text = this.ToasterOrder.FromBusiness ? "Yes" : "No";
                         break;
+                    case 9:
+                        cell.TextLabel.Text = AppText.Quantity;
+                        cell.TextLabel.Text = this.ToasterOrder.Quantity.ToString();
+                        break;
                 }
             }
             else
@@ -178,6 +182,10 @@ namespace Tabs.Mobile.ChicagoiOS.DataSource.Orders
                         cell.TextLabel.Text = AppText.FromBusiness;
                         cell.DetailTextLabel.Text = this.ToasterOrder.FromBusiness ? "Yes" : "No";
                         break;
+                    case 13:
+                        cell.TextLabel.Text = AppText.Quantity;
+                        cell.TextLabel.Text = this.ToasterOrder.Quantity.ToString();
+                        break;
                 }
             }
 
@@ -211,7 +219,7 @@ namespace Tabs.Mobile.ChicagoiOS.DataSource.Orders
         /// <returns></returns>
         public override nint RowsInSection(UITableView tableview, nint section)
         {
-            return this.ToasterOrderEnum == ToasterOrder.ToasterOrderEnum.Receiver ? 9 : 13;
+            return this.ToasterOrderEnum == ToasterOrder.ToasterOrderEnum.Receiver ? 10 : 14;
         }
 
         #endregion

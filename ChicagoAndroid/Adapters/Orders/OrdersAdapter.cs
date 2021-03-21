@@ -9,6 +9,7 @@ using Tabs.Mobile.Shared.Models.Orders;
 using Tabs.Mobile.ChicagoAndroid.Fragments.Orders;
 using Tabs.Mobile.ChicagoAndroid.Activities.Orders;
 using Tabs.Mobile.ChicagoAndroid.ViewHolders.Orders;
+using Tabs.Mobile.Shared.Helpers;
 
 namespace Tabs.Mobile.ChicagoAndroid.Adapters.Orders
 {
@@ -138,7 +139,7 @@ namespace Tabs.Mobile.ChicagoAndroid.Adapters.Orders
                 holder.ActionButon.SetTag(Resource.Id.actionButon, position);
                 string freeOrder = item.FromBusiness ? AppText.FreeOrder : "";
                 holder.OrderNumber.Text = item.ToasterOrderId.ToString() + freeOrder;
-                holder.DrinkName.Text = string.IsNullOrEmpty(item.DrinkName) ? "" : item.DrinkName;
+                holder.DrinkName.Text = SendDrinkHelper.GetDrinkQuantityAndName(item);
                 var buttonTitle = AppText.PickedUp;
 
                 switch (this.ToasterOrderEnum)

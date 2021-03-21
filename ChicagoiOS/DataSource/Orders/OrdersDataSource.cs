@@ -6,6 +6,7 @@ using UIKit;
 using BigTed;
 using Tabs.Mobile.Shared.Resources;
 using Tabs.Mobile.Shared.Models.Orders;
+using Tabs.Mobile.Shared.Helpers;
 
 namespace Tabs.Mobile.ChicagoiOS.DataSource.Orders
 {
@@ -68,7 +69,7 @@ namespace Tabs.Mobile.ChicagoiOS.DataSource.Orders
             {
                 string freeOrder = item.FromBusiness ? AppText.FreeOrder : "";
                 cell._OrderNumber.Text = item.ToasterOrderId.ToString() + freeOrder;
-                cell._DrinkName.Text = string.IsNullOrEmpty(item.DrinkName) ? "" : item.DrinkName;
+                cell._DrinkName.Text = SendDrinkHelper.GetDrinkQuantityAndName(item);
                 var buttonTitle = AppText.PickedUp;
 
                 switch (this.ToasterOrderEnum)

@@ -380,6 +380,7 @@ namespace Tabs.Mobile.ChicagoiOS
                 toasterOrder.SalesTax = 0;
                 toasterOrder.StripeFee = 0;
                 toasterOrder.CardChargeAmount = 0;
+                toasterOrder.Quantity = SendDrinkHelper.GetDrinkQuantity(Quantity.Text);
 
                 await AppDelegate.ToasterOrderFactory.New(toasterOrder);
 
@@ -442,6 +443,7 @@ namespace Tabs.Mobile.ChicagoiOS
                 toasterOrder.SalesTax = 0;
                 toasterOrder.StripeFee = stripeFee;
                 toasterOrder.CardChargeAmount = totalAmount - stripeFee;
+                toasterOrder.Quantity = SendDrinkHelper.GetDrinkQuantity(Quantity.Text);
 
                 if (usePoint)
                 {

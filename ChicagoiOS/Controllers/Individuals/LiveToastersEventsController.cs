@@ -401,10 +401,18 @@ namespace Tabs.Mobile.ChicagoiOS
 
                 //this.TabBarController.NavigationController.NavigationBarHidden = false;
                 this.TabBarController.NavigationItem.SearchController = null;
-                this.TabBarController.NavigationItem.SetRightBarButtonItem(new UIBarButtonItem(UIBarButtonSystemItem.Action, (sender, args) =>
+               
+                var drinkImage = UIButton.FromType(UIButtonType.RoundedRect);
+                drinkImage.Frame = new CGRect(0, 0, 30, 30);
+                drinkImage.SizeToFit();
+                drinkImage.SetImage(UIImage.FromBundle("local_bar_white_24pt"), UIControlState.Normal);
+                var drinkItem = new UIBarButtonItem(drinkImage);
+
+                drinkImage.TouchUpInside += delegate
                 {
                     OpenActionMenu();
-                }), true);
+                };
+                this.TabBarController.NavigationItem.SetRightBarButtonItem(drinkItem, true);
 
                 SetTitle();
             }
