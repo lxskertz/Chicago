@@ -172,6 +172,7 @@ namespace Tabs.Mobile.ChicagoiOS
         /// </summary>
         private void OpenDateTimePicker()
         {
+            _DatePicker.PreferredDatePickerStyle = UIDatePickerStyle.Wheels;
             if (ControllerCaller == Caller.OrdersController)
             {
                 _DatePicker.Mode = UIDatePickerMode.Date;

@@ -278,6 +278,9 @@ namespace Tabs.Mobile.ChicagoAndroid.Fragments.Orders
                 this.HomeContext.ShowProgressbar(true, "", ToastMessage.Charging);
 
                 var order = await App.ToasterOrderFactory.GetByOrderId(item.ToasterOrderId);
+                var businessInfo = await App.BusinessFactory.GetByUserId(this.HomeContext.CurrentUser.UserId);
+                string businessName = businessInfo != null ? businessInfo?.BusinessName : "";
+
                 if (order != null && !order.Cancelled && !item.Charged)
                 {
 
@@ -286,7 +289,7 @@ namespace Tabs.Mobile.ChicagoAndroid.Fragments.Orders
                     if (stripeCustomerInfo != null)
                     {
                         item.CardChargeAmount = Math.Round(item.TotalOrderAmount - item.StripeFee, 2);
-                        var charge = await App.CustomerPaymentInfoFactory.ChargeCustomer(stripeCustomerInfo.StripeCustomerId, item.CardChargeAmount, "");
+                        var charge = await App.CustomerPaymentInfoFactory.ChargeCustomer(stripeCustomerInfo.StripeCustomerId, item.CardChargeAmount, "", businessName);
 
                         if (charge != null && charge.Paid)
                         {

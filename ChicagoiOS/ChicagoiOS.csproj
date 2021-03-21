@@ -64,6 +64,8 @@
     <MtouchFastDev>true</MtouchFastDev>
     <CodesignExtraArgs />
     <CodesignResourceRules />
+    <BuildIpa>true</BuildIpa>
+    <IpaIncludeArtwork>false</IpaIncludeArtwork>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -251,6 +253,9 @@
     <BundleResource Include="Resources\Toasters\more_vert_black_24pt%401x.png" />
     <BundleResource Include="Resources\Toasters\more_vert_black_24pt%402x.png" />
     <BundleResource Include="Resources\Toasters\more_vert_black_24pt%403x.png" />
+    <BundleResource Include="Resources\local_bar_white_24pt.png" />
+    <BundleResource Include="Resources\local_bar_white_24pt2%40.png" />
+    <BundleResource Include="Resources\local_bar_white_24pt3%40.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

@@ -99,13 +99,14 @@ namespace Tabs.Mobile.Shared.Managers.Payments
             Customer customer = await service.UpdateAsync(customerId, options);
         }
 
-        public async Task<Charge> ChargeCustomer(string customerId, double amount, string cardToken)
+        public async Task<Charge> ChargeCustomer(string customerId, double amount, string cardToken, string businessName )
         {
             var chargeOptions = new ChargeCreateOptions
             {
                 Amount = Convert.ToInt64(amount * 100),
                 Currency = "usd",
-                CustomerId = customerId
+                CustomerId = customerId, 
+                Description = businessName
             };
 
             var chargeService = new ChargeService();
