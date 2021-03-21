@@ -43,7 +43,8 @@ namespace Tabs.Mobile.Shared.WebServices
                 FromBusiness = toasterOrder.FromBusiness,
                 SalesTax = toasterOrder.SalesTax,
                 StripeFee = toasterOrder.StripeFee,
-                CardChargeAmount = toasterOrder.CardChargeAmount
+                CardChargeAmount = toasterOrder.CardChargeAmount,
+                Quantity = toasterOrder.Quantity
             };
             var request = Task.Run(() => response = this.ServiceClient.MakeRequest<HttpResponseMessage>(methodPath, parameters, true, "PUT"));
             response = await request;

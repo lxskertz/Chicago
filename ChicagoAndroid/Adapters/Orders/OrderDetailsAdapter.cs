@@ -49,7 +49,7 @@ namespace Tabs.Mobile.ChicagoAndroid.Adapters.Orders
         {
             get
             {
-                return this.ToasterOrderEnum == ToasterOrder.ToasterOrderEnum.Receiver ? 9 : 13;
+                return this.ToasterOrderEnum == ToasterOrder.ToasterOrderEnum.Receiver ? 10 : 14;
             }
         }
 
@@ -140,6 +140,10 @@ namespace Tabs.Mobile.ChicagoAndroid.Adapters.Orders
                         title.Text = AppText.FromBusiness;
                         subTitle.Text = this.ToasterOrder.FromBusiness ? "Yes" : "No";
                         break;
+                    case 9:
+                        title.Text = AppText.Quantity;
+                        subTitle.Text = this.ToasterOrder.Quantity.ToString();
+                        break;
                 }
             }
             else
@@ -217,6 +221,10 @@ namespace Tabs.Mobile.ChicagoAndroid.Adapters.Orders
                     case 12:
                         title.Text = AppText.FromBusiness;
                         subTitle.Text = this.ToasterOrder.FromBusiness ? "Yes" : "No";
+                        break;
+                    case 13:
+                        title.Text = AppText.Quantity;
+                        subTitle.Text = this.ToasterOrder.Quantity.ToString();
                         break;
                 }
             }

@@ -13,6 +13,7 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <ProvisioningType>manual</ProvisioningType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,17 +52,20 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchArch>ARM64</MtouchArch>
     <CodesignEntitlements>
     </CodesignEntitlements>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <MtouchSdkVersion>12.4</MtouchSdkVersion>
+    <MtouchSdkVersion>14.4</MtouchSdkVersion>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <CodesignProvision>TabsDevProfile</CodesignProvision>
+    <CodesignProvision>
+    </CodesignProvision>
     <MtouchFastDev>true</MtouchFastDev>
     <CodesignExtraArgs />
     <CodesignResourceRules />
+    <BuildIpa>true</BuildIpa>
+    <IpaIncludeArtwork>false</IpaIncludeArtwork>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -249,6 +253,9 @@
     <BundleResource Include="Resources\Toasters\more_vert_black_24pt%401x.png" />
     <BundleResource Include="Resources\Toasters\more_vert_black_24pt%402x.png" />
     <BundleResource Include="Resources\Toasters\more_vert_black_24pt%403x.png" />
+    <BundleResource Include="Resources\local_bar_white_24pt.png" />
+    <BundleResource Include="Resources\local_bar_white_24pt2%40.png" />
+    <BundleResource Include="Resources\local_bar_white_24pt3%40.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

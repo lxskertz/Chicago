@@ -17,7 +17,7 @@ namespace Tabs.Mobile.Shared.Interfaces.Payments
 
         Task<List<Card>> GetAllCards(string customerId);
 
-        Task<Charge> ChargeCustomer(string customerId, double amount, string cardToken);
+        Task<Charge> ChargeCustomer(string customerId, double amount, string cardToken, string businessName);
 
         Task ChangeDefaultPayment(string customerId, string cardToken);
 

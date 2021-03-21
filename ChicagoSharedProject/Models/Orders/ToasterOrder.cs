@@ -76,5 +76,7 @@ namespace Tabs.Mobile.Shared.Models.Orders
 
         public double CardChargeAmount { get; set; }
 
+        public int Quantity { get; set; }
+
     }
 }
