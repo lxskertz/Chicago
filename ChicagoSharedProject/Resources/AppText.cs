@@ -51,6 +51,7 @@
         public const string FromBusiness = "From Business";
         public const string ItsSpam = "It's Spam";
         public const string ItsInappropriate = "It's Inappropriate";
+        public const string Quantity = "Quantity";
 
         public const string OrderNumber = "Order Number";
         public const string ReceiverName = "Receiver Name";

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Tabs.Mobile.Shared.Models.Orders;
 
 namespace Tabs.Mobile.Shared.Helpers
 {
@@ -195,6 +196,34 @@ namespace Tabs.Mobile.Shared.Helpers
 
                 return tipCounter = tipCounter - 1;
             }
+        }
+
+        public static int GetDrinkQuantity(string quantity)
+        {
+            int drinkQuantity = 0;
+
+            if (string.IsNullOrEmpty(quantity))
+            {
+                return 0;
+            }
+
+            int.TryParse(quantity, out drinkQuantity);
+
+            return drinkQuantity;
+        }
+
+
+        public static string GetDrinkQuantityAndName(ToasterOrder item)
+        {
+            if(string.IsNullOrEmpty(item.DrinkName))
+            {
+                return item.Quantity + " ";
+            }
+
+            //var quantity = item.Quantity > 0 ? item.Quantity : 0;
+
+            return item.Quantity > 0 ? item.Quantity + " - " + item.DrinkName : item.DrinkName;
+
         }
 
         #endregion

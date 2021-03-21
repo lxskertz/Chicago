@@ -306,16 +306,16 @@ namespace Tabs.Mobile.ChicagoAndroid.Activities.Businesses
                     ShowSnack(coordinatorLayout, ToastMessage.InvalidEndDate, "OK");
                     return;
                 }
-                if (!TimeHelper.ValidStartTime(Convert.ToDateTime(startTimeText.Text), Mode == BusinessEvents.ActionMode.Edit))
-                {
-                    ShowSnack(coordinatorLayout, ToastMessage.InvalidStartTime, "OK");
-                    return;
-                }
-                if (!TimeHelper.ValidEndTime(Convert.ToDateTime(startTimeText.Text), Convert.ToDateTime(endTimeText.Text)))
-                {
-                    ShowSnack(coordinatorLayout, ToastMessage.InvalidEndTime, "OK");
-                    return;
-                }
+                //if (!TimeHelper.ValidStartTime(Convert.ToDateTime(startTimeText.Text), Mode == BusinessEvents.ActionMode.Edit))
+                //{
+                //    ShowSnack(coordinatorLayout, ToastMessage.InvalidStartTime, "OK");
+                //    return;
+                //}
+                //if (!TimeHelper.ValidEndTime(Convert.ToDateTime(startTimeText.Text), Convert.ToDateTime(endTimeText.Text)))
+                //{
+                //    ShowSnack(coordinatorLayout, ToastMessage.InvalidEndTime, "OK");
+                //    return;
+                //}
                 if ((int)selectTypeSpinner.SelectedView.Tag == 0)
                 {
                     ShowSnack(coordinatorLayout, ToastMessage.SelectEventType, "OK");

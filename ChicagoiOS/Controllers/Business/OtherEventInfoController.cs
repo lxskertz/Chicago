@@ -349,16 +349,16 @@ namespace Tabs.Mobile.ChicagoiOS
                     BTProgressHUD.ShowErrorWithStatus(ToastMessage.InvalidEndDate, Helpers.ToastTime.ErrorTime);
                     return;
                 }
-                if (!TimeHelper.ValidStartTime(EventStartDateTime.Value, Mode == BusinessEvents.ActionMode.Edit))
-                {
-                    BTProgressHUD.ShowErrorWithStatus(ToastMessage.InvalidStartTime, Helpers.ToastTime.ErrorTime);
-                    return;
-                }
-                if (!TimeHelper.ValidEndTime(EventStartDateTime.Value, EventEndDateTime.Value))
-                {
-                    BTProgressHUD.ShowErrorWithStatus(ToastMessage.InvalidEndTime, Helpers.ToastTime.ErrorTime);
-                    return;
-                }
+                //if (!TimeHelper.ValidStartTime(EventStartDateTime.Value, Mode == BusinessEvents.ActionMode.Edit))
+                //{
+                //    BTProgressHUD.ShowErrorWithStatus(ToastMessage.InvalidStartTime, Helpers.ToastTime.ErrorTime);
+                //    return;
+                //}
+                //if (!TimeHelper.ValidEndTime(EventStartDateTime.Value, EventEndDateTime.Value))
+                //{
+                //    BTProgressHUD.ShowErrorWithStatus(ToastMessage.InvalidEndTime, Helpers.ToastTime.ErrorTime);
+                //    return;
+                //}
 
                 if (SelectedEventType == null)
                 {
