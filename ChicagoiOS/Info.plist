@@ -5,11 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>TABS</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.toastingandbeingsocial.tabsdev</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>com.toastingandbeingsocial.tabs</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
@@ -90,5 +86,9 @@
 		<string>fetch</string>
 		<string>remote-notification</string>
 	</array>
+	<key>CFBundleShortVersionString</key>
+	<string>2.5</string>
+	<key>CFBundleVersion</key>
+	<string>2.5</string>
 </dict>
 </plist>

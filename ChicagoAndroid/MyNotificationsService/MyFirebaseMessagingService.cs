@@ -16,7 +16,7 @@ using Build = Android.OS.Build;
 
 namespace Tabs.Mobile.ChicagoAndroid.MyNotificationsService
 {
-    [Service (Name = "com.toastingandbeingsocial.tabsdev.MyFirebaseMessagingService")]
+    [Service (Name = "com.toastingandbeingsocial.tabs.MyFirebaseMessagingService")]
     [IntentFilter(new[] { "com.google.firebase.MESSAGING_EVENT" })]
     public class MyFirebaseMessagingService : FirebaseMessagingService
     {

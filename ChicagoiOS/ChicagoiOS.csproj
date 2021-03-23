@@ -55,12 +55,11 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignEntitlements>
     </CodesignEntitlements>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Distribution</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <MtouchSdkVersion>14.4</MtouchSdkVersion>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <CodesignProvision>
-    </CodesignProvision>
+    <CodesignProvision>Tabs Production Profile</CodesignProvision>
     <MtouchFastDev>true</MtouchFastDev>
     <CodesignExtraArgs />
     <CodesignResourceRules />
@@ -76,7 +75,9 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchArch>ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>Apple Distribution: Toasting And Being Social LLC (26J7S3VW6B)</CodesignKey>
+    <MtouchSdkVersion>14.4</MtouchSdkVersion>
+    <BuildIpa>true</BuildIpa>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />
